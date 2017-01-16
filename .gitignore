@@ -9,6 +9,7 @@
 .idea/tasks.xml
 
 # Sensitive or high-churn files:
+.idea/compiler.xml
 .idea/dataSources/
 .idea/dataSources.ids
 .idea/dataSources.xml
@@ -16,6 +17,7 @@
 .idea/sqlDataSources.xml
 .idea/dynamic.xml
 .idea/uiDesigner.xml
+.idea/vcs.xml
 
 # Gradle:
 .idea/gradle.xml
@@ -48,10 +50,10 @@ fabric.properties
 ### Intellij Patch ###
 # Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
 
-# *.iml
-# modules.xml
-# .idea/misc.xml
-# *.ipr
+*.iml
+modules.xml
+.idea/misc.xml
+*.ipr
 
 # End of https://www.gitignore.io/api/intellij
 
