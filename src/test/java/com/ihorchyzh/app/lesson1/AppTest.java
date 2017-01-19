@@ -1,4 +1,4 @@
-package com.ihorchyzh.app;
+package com.ihorchyzh.app.lesson1;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

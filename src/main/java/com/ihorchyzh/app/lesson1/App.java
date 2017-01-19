@@ -1,4 +1,4 @@
-package com.ihorchyzh.app;
+package com.ihorchyzh.app.lesson1;
 
 /**
  * Hello world!
