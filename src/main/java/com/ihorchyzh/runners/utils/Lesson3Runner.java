@@ -1,6 +1,6 @@
-package com.ihorchyzh.app.utils.runners;
+package com.ihorchyzh.runners.utils;
 
-import com.ihorchyzh.app.utils.convertors.PrimitiveConvertor;
+import com.ihorchyzh.app.utils.PrimitiveConvertor;
 
 /**
  * Created by ihorchyzh on 1/22/17.

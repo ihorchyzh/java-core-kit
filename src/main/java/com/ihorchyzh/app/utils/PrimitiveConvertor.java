@@ -1,4 +1,4 @@
-package com.ihorchyzh.app.utils.convertors;
+package com.ihorchyzh.app.utils;
 
 /**
  * Created by ihorchyzh on 1/22/17.
