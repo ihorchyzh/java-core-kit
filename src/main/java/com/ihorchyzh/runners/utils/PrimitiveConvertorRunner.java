@@ -5,7 +5,7 @@ import com.ihorchyzh.app.utils.PrimitiveConvertor;
 /**
  * Created by ihorchyzh on 1/22/17.
  */
-public class Lesson3Runner {
+public class PrimitiveConvertorRunner {
 
 
     public static void main(String[] args) {
