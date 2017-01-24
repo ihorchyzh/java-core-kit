@@ -10,15 +10,45 @@ import static org.junit.Assert.*;
  */
 public class MathFuncTest {
 
+    MathFunc mathFunc = new MathFunc();
+
     @Test // JUnit framework annotation
 
     public void multiplyTest(){
 
-        MathFunc mathFunc = new MathFunc();
-
         int a = 4, b = 6, expRes = 24;
 
         Assert.assertEquals(expRes, mathFunc.multiply(a, b));
+
+    }
+
+    @Test // JUnit framework annotation
+
+    public void sumTest(){
+
+        int a = 4, b = 6, expRes = 10;
+
+        Assert.assertEquals(expRes, mathFunc.sum(a, b));
+
+    }
+
+    @Test // JUnit framework annotation
+
+    public void diffTest(){
+
+        int a = 4, b = 6, expRes = -2;
+
+        Assert.assertEquals(expRes, mathFunc.diff(a, b));
+
+    }
+
+    @Test // JUnit framework annotation
+
+    public void divTest(){
+
+        int a = 42, b = 6, expRes = 7;
+
+        Assert.assertEquals(expRes, mathFunc.div(a, b));
 
     }
 
