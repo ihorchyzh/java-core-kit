@@ -14,65 +14,23 @@ public class PrimitiveConverterTest {
     PrimitiveConverter primitiveConverter = new PrimitiveConverter();
 
     @Test
-    public void floatToCharAssertSameTest() {
+    public void floatToCharTest() {
 
-        Assert.assertSame("Should be the same", '|', primitiveConverter.floatToChar(124.0f));
-
-    }
-
-    @Test
-    public void intToCharAssertSameTest() {
-
-        Assert.assertSame("Should be the same", '|', primitiveConverter.intToChar(124));
+        Assert.assertEquals('|', primitiveConverter.floatToChar(124.0f));
 
     }
 
     @Test
-    public void charToIntAssertSameTest() {
+    public void intToCharTest() {
 
-        Assert.assertSame("Should be the same", 124, primitiveConverter.charToInt('|'));
-
-    }
-
-    @Test
-    public void floatToCharAssertNotSameTest() {
-
-        Assert.assertNotSame("Shouldn't be the same", '=', primitiveConverter.floatToChar(124.0f));
+        Assert.assertEquals('|', primitiveConverter.intToChar(124));
 
     }
 
     @Test
-    public void intToCharAssertNotSameTest() {
+    public void charToIntTest() {
 
-        Assert.assertNotSame("Shouldn't be the same", '-', primitiveConverter.intToChar(124));
-
-    }
-
-    @Test
-    public void charToIntAssertNotSameTest() {
-
-        Assert.assertNotSame("Shouldn't be the same", 125, primitiveConverter.charToInt('|'));
-
-    }
-
-    @Test
-    public void floatToCharAssertNotNullTest() {
-
-        Assert.assertNotNull("Shouldn't be NULL", primitiveConverter.floatToChar(124.0f));
-
-    }
-
-    @Test
-    public void intToCharAssertNotNullTest() {
-
-        Assert.assertNotNull("Shouldn't be NULL", primitiveConverter.intToChar(124));
-
-    }
-
-    @Test
-    public void charToIntAssertNotNullTest() {
-
-        Assert.assertNotNull("Shouldn't be NULL", primitiveConverter.charToInt('|'));
+        Assert.assertEquals(124, primitiveConverter.charToInt('|'));
 
     }
 

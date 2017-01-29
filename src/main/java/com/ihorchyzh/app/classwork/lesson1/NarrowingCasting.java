@@ -5,29 +5,11 @@ package com.ihorchyzh.app.classwork.lesson1;
  */
 public class NarrowingCasting {
 
-    public static void main(String[] args) {
+    public static int narrowing(float floatNumber){
 
-        NarrowingCasting narrowingCasting = new NarrowingCasting();
-        narrowingCasting.narrowing();
+        int intNumber = (int) floatNumber;
+        return intNumber;
 
     }
-
-    int int1 = 127;
-    float float1 = 31.5f;
-
-//        public void narrowing() {
-//
-//            float1 = int1;
-//            System.out.println(float1);
-//
-//        }
-
-        public void narrowing() {
-
-            int1 = (int) float1;
-            System.out.println(int1);
-
-        }
-
 
 }
