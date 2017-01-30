@@ -7,7 +7,8 @@ package com.ihorchyzh.app.classwork.lesson3;
 public class MathFunctions {
 
     public int multiply(int a, int b) {
-        return a * b;
+        int result = a * b;
+        return result;
     }
 
     public String addition(String a, String b) {
