@@ -12,9 +12,17 @@ public class PrimitiveConvertorRunner {
 
         PrimitiveConverter primitiveConverter = new PrimitiveConverter();
 
-        primitiveConverter.floatToChar(124f);
-        primitiveConverter.intToChar(124);
-        primitiveConverter.charToInt('|');
+        float floatNumber = 124f;
+        System.out.println("Input float value is " + floatNumber + ". Output char value is " +
+                primitiveConverter.floatToChar(floatNumber));
+
+        int intNumber = 124;
+        System.out.println("Input integer value is " + intNumber + ". Output char value is " +
+                primitiveConverter.intToChar(intNumber));
+
+        char charSymbol = '|';
+        System.out.println("Input char value is " + charSymbol + ". Output integer value is " +
+                primitiveConverter.charToInt(charSymbol));
 
     }
 

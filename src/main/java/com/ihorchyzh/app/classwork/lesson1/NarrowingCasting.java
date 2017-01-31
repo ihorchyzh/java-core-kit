@@ -5,7 +5,7 @@ package com.ihorchyzh.app.classwork.lesson1;
  */
 public class NarrowingCasting {
 
-    public static int narrowing(float floatNumber){
+    public int narrowing(float floatNumber){
 
         int intNumber = (int) floatNumber;
         return intNumber;

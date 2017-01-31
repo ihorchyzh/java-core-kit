@@ -1,6 +1,7 @@
 package com.ihorchyzh.app.classwork.lesson1;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -12,9 +13,16 @@ public class WideningCastingTest {
 
     public static final double DELTA = 0;
 
+    @Before
+    public void setUp(){
+        wideningCasting = new WideningCasting();
+    }
+
+    WideningCasting wideningCasting;
+
     @Test
     public void widening() throws Exception {
-        Assert.assertEquals(11.0f, WideningCasting.widening(11), DELTA);
+        Assert.assertEquals(11.0f, wideningCasting.widening(11), DELTA);
     }
 
 }

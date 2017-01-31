@@ -49,7 +49,7 @@ public class Lesson4Runner {
                     double sideA = scanner.nextDouble();
                     double sideB = scanner.nextDouble();
                     double sideC = scanner.nextDouble();
-                    System.out.println(lesson4.rightAngledTriangle(sideA, sideB, sideC));
+                    System.out.println(lesson4.isRightAngledTriangle(sideA, sideB, sideC));
                 }
                 if (userChoice == 4) {
                     System.out.println("Lets find out is this number Odd or Even...?\n");

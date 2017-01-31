@@ -31,13 +31,11 @@ public class Lesson4 {
         }
     }
 
-    public String rightAngledTriangle(double sideA, double sideB, double sideC) {
+    public String isRightAngledTriangle(double sideA, double sideB, double sideC) {
 
-        if (
-                (Math.pow(sideC, 2) == Math.pow(sideA, 2) + Math.pow(sideB, 2)) ||
-                        (Math.pow(sideB, 2) == Math.pow(sideA, 2) + Math.pow(sideC, 2)) ||
-                        (Math.pow(sideA, 2) == Math.pow(sideC, 2) + Math.pow(sideB, 2))
-                ) {
+        if ((Math.pow(sideC, 2) == Math.pow(sideA, 2) + Math.pow(sideB, 2)) ||
+            (Math.pow(sideB, 2) == Math.pow(sideA, 2) + Math.pow(sideC, 2)) ||
+            (Math.pow(sideA, 2) == Math.pow(sideC, 2) + Math.pow(sideB, 2))) {
             return "This is right-angled triangle!";
         } else {
             return "You have not right-angled triangle";

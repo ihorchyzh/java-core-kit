@@ -5,7 +5,7 @@ package com.ihorchyzh.app.classwork.lesson1;
  */
 public class WideningCasting {
 
-    public static double widening(int intNumber){
+    public double widening(int intNumber){
 
         float floatNumber = intNumber;
         return floatNumber;

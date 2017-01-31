@@ -3,30 +3,35 @@ package com.ihorchyzh.app.homework.lesson1;
 /**
  * Created by ihorchyzh on 1/29/17.
  */
-public class Variables {
+public class Lesson1Variables {
 
-    public static void main(String[] args) {
+    byte b = 26;
+    short s = 2034;
+    int i = 8;
+    long l = 63653563866868L;
+    float f = 2.7578656f;
+    double d = 5.76557D;
 
-        byte b = 23;
-        short s = 2034;
-        int i = 424275;
-        long l = 63653563866868L;
+    char c = '|';
+    boolean bool = true;
+    boolean boolNot = false;
 
-        float f = 2.7578f;
-        double d = 5.7657D;
+    String strNull;
+    String str = "12wq";
 
-        int age = 26;                                       //26  age > variable & 26 > literal
-        System.out.println("Your age is " + age);
-        age = 16;                                           //16
-        System.out.println("Your age is " + age);
-        age += 1;                                           //17
-        System.out.println("Your age is " + age);
-        age = age * 2;                                      //34
-        System.out.println("Your age is " + age);
-        age = (age * 2) - age + 2;                          //36
-        System.out.println("Your age is " + age);
-    }
 }
+
+
+//        int age = 26;                                       //26  age > variable & 26 > literal
+//        System.out.println("Your age is " + age);
+//        age = 16;                                           //16
+//        System.out.println("Your age is " + age);
+//        age += 1;                                           //17
+//        System.out.println("Your age is " + age);
+//        age = age * 2;                                      //34
+//        System.out.println("Your age is " + age);
+//        age = (age * 2) - age + 2;                          //36
+//        System.out.println("Your age is " + age);
 
 // binary >>> decimal
 // 01     >>> 0123456789

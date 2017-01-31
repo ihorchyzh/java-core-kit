@@ -10,11 +10,14 @@ public class Lesson1Runner {
 
     public static void main(String[] args) {
 
+        NarrowingCasting narrowingCasting = new NarrowingCasting();
+        WideningCasting wideningCasting = new WideningCasting();
+
         float floatNumber = 12.4f;
-        System.out.println(NarrowingCasting.narrowing(floatNumber));
+        System.out.println(narrowingCasting.narrowing(floatNumber));
 
         int intNumber = 10;
-        System.out.println(WideningCasting.widening(intNumber));
+        System.out.println(wideningCasting.widening(intNumber));
 
     }
 
