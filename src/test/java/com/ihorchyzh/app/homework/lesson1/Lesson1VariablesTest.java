@@ -4,6 +4,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.both;
+import static org.hamcrest.CoreMatchers.containsString;
+
 /**
  * Created by ihorchyzh on 1/31/17.
  */
@@ -84,6 +87,13 @@ public class Lesson1VariablesTest {
     @Test
     public void variableString2Test() throws Exception {
         Assert.assertNull(lesson1Variables.strNull);
+    }
+
+    @Test
+    public void variableStringBothContainsStringTest() {
+        String firstStr = "1";
+        String secondStr = "q";
+        Assert.assertThat(lesson1Variables.str, both(containsString(firstStr)).and(containsString(secondStr)));
     }
 
 }
