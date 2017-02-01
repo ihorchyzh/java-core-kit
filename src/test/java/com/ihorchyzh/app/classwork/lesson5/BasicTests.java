@@ -57,12 +57,12 @@ public class BasicTests {
 //        while (true) ;
 //    }
 
-    @Ignore("Not ready yet")
-
-    @Test(timeout = 1000)
-    public void thisTestNotReady() {
-
-    }
+//    @Ignore("Not ready yet")
+//
+//    @Test(timeout = 1000)
+//    public void thisTestNotReady() {
+//
+//    }
 
     @After
     public void postConditionsForTest() {

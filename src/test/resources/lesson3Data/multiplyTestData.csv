@@ -1,0 +1,4 @@
+int a,  int b,  int expRes
+2,      3,      6
+4,      8,      32
+-2,     -4,     8

@@ -19,12 +19,18 @@ public class ParametrizedTests {
         mathFunctions = new MathFunctions();
     }
 
-    public MathFunctions mathFunctions;
+    MathFunctions mathFunctions;
 
     @Test
     @FileParameters(value = "src/test/resources/lesson5Data/testData.csv", mapper = CsvWithHeaderMapper.class)
     public void multiplyTest(int a, int b, int expected) {
         Assert.assertEquals(expected, mathFunctions.multiply(a, b));
+    }
+
+    @Test
+    @FileParameters(value = "src/test/resources/lesson5Data/additionTestData.csv", mapper = CsvWithHeaderMapper.class)
+    public void additionTest(String a, String b, String expected) {
+        Assert.assertEquals(expected, mathFunctions.addition(a, b));
     }
 
 }
