@@ -1,5 +1,6 @@
 package com.ihorchyzh.app.classwork.lesson3;
 
+import com.ihorchyzh.app.magic.MagicJUnitParamsRunner;
 import junitparams.FileParameters;
 import junitparams.JUnitParamsRunner;
 import junitparams.mappers.CsvWithHeaderMapper;
@@ -11,7 +12,8 @@ import org.junit.runner.RunWith;
 /**
  * Created by ihorchyzh on 2/1/17.
  */
-@RunWith(JUnitParamsRunner.class)
+//@RunWith(JUnitParamsRunner.class)
+@RunWith(MagicJUnitParamsRunner.class)
 public class MathFunctionsParametrizedTest {
 
     public static final double DELTA = 0.01;
