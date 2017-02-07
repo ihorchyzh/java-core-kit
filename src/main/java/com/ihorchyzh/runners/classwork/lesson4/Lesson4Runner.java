@@ -11,9 +11,8 @@ import java.util.Scanner;
 public class Lesson4Runner {
 
     public static void main(String[] args) {
-
-        try {
-            do {
+        do {
+            try {
                 Lesson4 lesson4 = new Lesson4();
                 Scanner scanner = new Scanner(System.in);
                 System.out.println("\nHi! Here is an app that can perform some calculations. " +
@@ -25,8 +24,7 @@ public class Lesson4Runner {
                         "5. Check which of two numbers is bigger;\n\n" +
                         "6. Exit program.\n");
                 int userChoice = scanner.nextInt();
-                if (!((userChoice == 1) || (userChoice == 2) || (userChoice == 3) ||
-                        (userChoice == 4) || (userChoice == 5) || (userChoice == 6))) {
+                if (!((userChoice > 1) || (userChoice < 6))) {
                     System.out.println("You entered wrong number. Required only number from the list! Try again!");
                 }
                 if (userChoice == 1) {
@@ -68,9 +66,9 @@ public class Lesson4Runner {
                 if (userChoice == 6) {
                     break;
                 }
-            } while (true);
-        } catch (InputMismatchException e) {
-            System.out.println("You entered incorrect symbol! Try again!");
-        }
+            } catch (InputMismatchException e) {
+                System.out.println("You entered incorrect symbol! Try again!");
+            }
+        } while (true);
     }
 }

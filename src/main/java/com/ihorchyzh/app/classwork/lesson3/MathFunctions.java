@@ -37,13 +37,11 @@ public class MathFunctions {
     }
 
     public boolean isOddNumber(int number) {
-
-        boolean result = false;
+        boolean result;
         if (number % 2 > 0) {
-            System.out.println("true");
             result = true;
         } else {
-            System.out.println("false");
+            result = false;
         }
         return result;
     }

@@ -12,9 +12,9 @@ public class LoopsArrays {
 
 //  TASK 1. Count arrays length
 
-    public int evenArrayLengthCount() {
+    public int evenArrayLengthCount(int startNumber, int endNumber) {
         int evenArrayLength = 0;
-        for (int i = START_NUMBER_OF_EVEN_ARRAY; i <= END_NUMBER_OF_EVEN_ARRAY; i++) {
+        for (int i = startNumber; i <= endNumber; i++) {
             if (i % 2 == 0) {
                 evenArrayLength++;
             }
@@ -22,9 +22,9 @@ public class LoopsArrays {
         return evenArrayLength;
     }
 
-    public int oddArrayLengthCount() {
+    public int oddArrayLengthCount(int startNumber, int endNumber) {
         int oddArrayLength = 0;
-        for (int i = START_NUMBER_OF_ODD_ARRAY; i <= END_NUMBER_OF_ODD_ARRAY; i++) {
+        for (int i = startNumber; i <= endNumber; i++) {
             if (i % 2 != 0) {
                 oddArrayLength++;
             }
@@ -88,11 +88,11 @@ public class LoopsArrays {
 
 //  TASK 2C. Generate random array and count even numbers in array.
 
-    public int[] randomGeneratedArray2C() {
-        int[] randomGeneratedArray = new int[RANDOM_GENERATED_ARRAY_LENGTH];
+    public int[] randomGeneratedArray2C(int randomArrayLength, int startOfSegment, int endOfSegment) {
+        int[] randomGeneratedArray = new int[randomArrayLength];
         for (int i = 0; i < randomGeneratedArray.length; i++) {
             randomGeneratedArray[i] = ThreadLocalRandom.current()
-                    .nextInt(START_NUMBER_OF_SEGMENT_TASK_2C, END_NUMBER_OF_SEGMENT_TASK_2C + 1);
+                    .nextInt(startOfSegment, endOfSegment + 1);
         }
         return randomGeneratedArray;
     }
@@ -109,11 +109,11 @@ public class LoopsArrays {
 
 //  TASK 2D. Generate random array and out min and max numbers in array.
 
-    public int[] randomGeneratedArray2D() {
-        int[] randomGeneratedArray = new int[RANDOM_GENERATED_ARRAY_LENGTH];
+    public int[] randomGeneratedArray2D(int randomArrayLength, int startOfSegment, int endOfSegment) {
+        int[] randomGeneratedArray = new int[randomArrayLength];
         for (int i = 0; i < randomGeneratedArray.length; i++) {
             randomGeneratedArray[i] = ThreadLocalRandom.current()
-                    .nextInt(START_NUMBER_OF_SEGMENT_TASK_2D, END_NUMBER_OF_SEGMENT_TASK_2D + 1);
+                    .nextInt(startOfSegment, endOfSegment + 1);
         }
         return randomGeneratedArray;
     }
@@ -140,13 +140,13 @@ public class LoopsArrays {
 
 //  TASK 2D. Generate array 8x5 and out the array.
 
-    public int[][] multiDimensionalArray() {
+    public int[][] multiDimensionalArray(int columns, int rows, int startOfSegment, int endOfSegment) {
 
-        int[][] multiDimensionalArray = new int[MULTI_DIMENSIONAL_ARRAY_COLUMNS][MULTI_DIMENSIONAL_ARRAY_ROWS];
-        for (int i = 0; i < MULTI_DIMENSIONAL_ARRAY_COLUMNS; i++) {
-            for (int j = 0; j < MULTI_DIMENSIONAL_ARRAY_ROWS; j++) {
+        int[][] multiDimensionalArray = new int[columns][rows];
+        for (int i = 0; i < columns; i++) {
+            for (int j = 0; j < rows; j++) {
                 multiDimensionalArray[i][j] = ThreadLocalRandom.current()
-                        .nextInt(START_NUMBER_OF_SEGMENT_TASK_2E, END_NUMBER_OF_SEGMENT_TASK_2E + 1);
+                        .nextInt(startOfSegment, endOfSegment + 1);
             }
         }
         return multiDimensionalArray;
@@ -154,10 +154,9 @@ public class LoopsArrays {
 
     public String formattedVerticalMultiDimensionalArray(int[][] array) {
         String formattedVerticalMultiDimensionalArray = Arrays.deepToString(array)
-                .replace(" ", "")
-                .replace(",", "")
-                .replace("[", "")
-                .replace("]", "\n")
+                .replace("], [", "\n")
+                .replace("[[", "")
+                .replace("]]", "")
                 .trim();
         return formattedVerticalMultiDimensionalArray;
     }

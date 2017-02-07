@@ -11,25 +11,25 @@ import java.util.Scanner;
  */
 public class LoopsArraysRunner {
 
-    public static final int START_NUMBER_OF_EVEN_ARRAY = 2;
-    public static final int END_NUMBER_OF_EVEN_ARRAY = 20;
-    public static final int START_NUMBER_OF_ODD_ARRAY = 1;
-    public static final int END_NUMBER_OF_ODD_ARRAY = 99;
-    public static final int RANDOM_GENERATED_ARRAY_LENGTH = 15;
-    public static final int START_NUMBER_OF_SEGMENT_TASK_2C = 0;
-    public static final int END_NUMBER_OF_SEGMENT_TASK_2C = 9;
-    public static final int START_NUMBER_OF_SEGMENT_TASK_2D = 0;
-    public static final int END_NUMBER_OF_SEGMENT_TASK_2D = 999;
-    public static final int START_NUMBER_OF_SEGMENT_TASK_2E = 10;
-    public static final int END_NUMBER_OF_SEGMENT_TASK_2E = 99;
-    public static final int MULTI_DIMENSIONAL_ARRAY_COLUMNS = 8;
-    public static final int MULTI_DIMENSIONAL_ARRAY_ROWS = 5;
+    private static final int START_NUMBER_OF_EVEN_ARRAY = 2;
+    private static final int END_NUMBER_OF_EVEN_ARRAY = 20;
+    private static final int START_NUMBER_OF_ODD_ARRAY = 1;
+    private static final int END_NUMBER_OF_ODD_ARRAY = 99;
+    private static final int RANDOM_GENERATED_ARRAY_LENGTH = 15;
+    private static final int START_NUMBER_OF_SEGMENT_TASK_2C = 0;
+    private static final int END_NUMBER_OF_SEGMENT_TASK_2C = 9;
+    private static final int START_NUMBER_OF_SEGMENT_TASK_2D = 0;
+    private static final int END_NUMBER_OF_SEGMENT_TASK_2D = 999;
+    private static final int MULTI_DIMENSIONAL_ARRAY_COLUMNS = 8;
+    private static final int MULTI_DIMENSIONAL_ARRAY_ROWS = 5;
+    private static final int START_NUMBER_OF_SEGMENT_TASK_2E = 10;
+    private static final int END_NUMBER_OF_SEGMENT_TASK_2E = 99;
 
     public static void main(String[] args) {
-
         boolean exit = false;
-        try {
-            do {
+        do {
+            try {
+
                 LoopsArrays loopsArrays = new LoopsArrays();
                 Scanner scanner = new Scanner(System.in);
                 System.out.println("\nHi! Here is an app that can perform some actions with arrays. " +
@@ -43,34 +43,48 @@ public class LoopsArraysRunner {
                 int userChoice = scanner.nextInt();
                 switch (userChoice) {
                     case 1:
-                        int evenArrayLength = loopsArrays.evenArrayLengthCount();
+                        int evenArrayLength = loopsArrays.evenArrayLengthCount(
+                                START_NUMBER_OF_EVEN_ARRAY, END_NUMBER_OF_EVEN_ARRAY
+                        );
                         int[] evenArray = loopsArrays.evenArrayElementOut(evenArrayLength);
-                        System.out.println(loopsArrays.formattedHorizontalArray(evenArray));
+                        System.out.println(loopsArrays.formattedHorizontalArray(evenArray) + "\n");
                         System.out.println(loopsArrays.formattedVerticalArray(evenArray));
                         break;
                     case 2:
-                        int oddArrayLength = loopsArrays.oddArrayLengthCount();
+                        int oddArrayLength = loopsArrays.oddArrayLengthCount(
+                                START_NUMBER_OF_ODD_ARRAY, END_NUMBER_OF_ODD_ARRAY
+                        );
                         int[] oddArray = loopsArrays.oddArrayElementOut(oddArrayLength);
+                        System.out.println(loopsArrays.formattedHorizontalArray(oddArray));
                         int[] oddArrayReverse = loopsArrays.reverseArray(oddArray);
-                        System.out.println(Arrays.toString(oddArray));
-                        System.out.println(Arrays.toString(oddArrayReverse));
+                        System.out.println(loopsArrays.formattedHorizontalArray(oddArrayReverse));
                         break;
                     case 3:
-                        int[] randomGeneratedArray2C = loopsArrays.randomGeneratedArray2C();
+                        int[] randomGeneratedArray2C = loopsArrays.randomGeneratedArray2C(
+                                RANDOM_GENERATED_ARRAY_LENGTH, START_NUMBER_OF_SEGMENT_TASK_2C,
+                                END_NUMBER_OF_SEGMENT_TASK_2C
+                        );
                         System.out.println(Arrays.toString(randomGeneratedArray2C));
                         System.out.println("\n There are " +
                                 loopsArrays.countOfEvenNumbersInArray(randomGeneratedArray2C) +
                                 " even numbers in the array.");
                         break;
                     case 4:
-                        int[] randomGeneratedArray2D = loopsArrays.randomGeneratedArray2D();
+                        int[] randomGeneratedArray2D = loopsArrays.randomGeneratedArray2D(
+                                RANDOM_GENERATED_ARRAY_LENGTH, START_NUMBER_OF_SEGMENT_TASK_2D,
+                                END_NUMBER_OF_SEGMENT_TASK_2D
+                        );
                         System.out.println(Arrays.toString(randomGeneratedArray2D));
                         System.out.println("\nThe maximum number in array is " +
                                 loopsArrays.maxNumberInArray(randomGeneratedArray2D));
                         System.out.println("\nThe minimum number in array is " +
                                 loopsArrays.minNumberInArray(randomGeneratedArray2D));
+                        break;
                     case 5:
-                        int[][] multiDimensionalArray = loopsArrays.multiDimensionalArray();
+                        int[][] multiDimensionalArray = loopsArrays.multiDimensionalArray(
+                                MULTI_DIMENSIONAL_ARRAY_COLUMNS, MULTI_DIMENSIONAL_ARRAY_ROWS,
+                                START_NUMBER_OF_SEGMENT_TASK_2E, END_NUMBER_OF_SEGMENT_TASK_2E
+                        );
                         String multiDimensionalArrayString = loopsArrays.formattedVerticalMultiDimensionalArray(multiDimensionalArray);
                         System.out.println(multiDimensionalArrayString);
                         break;
@@ -78,9 +92,9 @@ public class LoopsArraysRunner {
                         exit = true;
                         break;
                 }
-            } while (exit != true);
-        } catch (InputMismatchException e) {
-            System.out.println("You entered incorrect symbol! Try again!");
-        }
+            } catch (InputMismatchException e) {
+                System.out.println("You entered incorrect symbol! Try again!");
+            }
+        } while (exit != true);
     }
 }
