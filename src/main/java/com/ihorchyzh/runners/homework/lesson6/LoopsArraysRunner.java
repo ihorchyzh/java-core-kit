@@ -24,6 +24,9 @@ public class LoopsArraysRunner {
     private static final int MULTI_DIMENSIONAL_ARRAY_ROWS = 5;
     private static final int START_NUMBER_OF_SEGMENT_TASK_2E = 10;
     private static final int END_NUMBER_OF_SEGMENT_TASK_2E = 99;
+    private static final int START_NUMBER_OF_SEGMENT_TASK_2F = 1;
+    private static final int END_NUMBER_OF_SEGMENT_TASK_2F = 999;
+
 
     public static void main(String[] args) {
         boolean exit = false;
@@ -38,8 +41,9 @@ public class LoopsArraysRunner {
                         "2. Out normal and reversed array;\n" +
                         "3. Generate random array and out quantity of even numbers in it;\n" +
                         "4. Generate random array and out maximum number in it;\n" +
-                        "5. Generate array 8x5 and out the array;\n\n" +
-                        "6. Exit program.\n");
+                        "5. Generate array 8x5 and out the array;\n" +
+                        "6. Generate array 8x5 and out the formatted array;\n" +
+                        "8. Exit program.\n");
                 int userChoice = scanner.nextInt();
                 switch (userChoice) {
                     case 1:
@@ -89,6 +93,14 @@ public class LoopsArraysRunner {
                         System.out.println(multiDimensionalArrayString);
                         break;
                     case 6:
+                        int[][] multiDimensionalArrayFormatted = loopsArrays.multiDimensionalArray(
+                                MULTI_DIMENSIONAL_ARRAY_COLUMNS, MULTI_DIMENSIONAL_ARRAY_ROWS,
+                                START_NUMBER_OF_SEGMENT_TASK_2F, END_NUMBER_OF_SEGMENT_TASK_2F
+                        );
+                        String multiDimensionalArrayFormattedString = loopsArrays.formattedVerticalMultiDimensionalArray(multiDimensionalArrayFormatted);
+                        System.out.printf("%4s", multiDimensionalArrayFormattedString);
+                        break;
+                    case 8:
                         exit = true;
                         break;
                 }

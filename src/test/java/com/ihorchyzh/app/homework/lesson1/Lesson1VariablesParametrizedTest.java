@@ -23,7 +23,7 @@ public class Lesson1VariablesParametrizedTest {
     Lesson1Variables lesson1Variables;
 
     @Test
-    @FileParameters(value = "src/test/resources/lesson3Data/trueData.csv", mapper = CsvWithHeaderMapper.class)
+    @FileParameters(value = "src/test/resources/lesson1Data/trueData.csv", mapper = CsvWithHeaderMapper.class)
     public void variableString1Test(String str, boolean expRes) throws Exception {
         Assert.assertNotNull(lesson1Variables.str);
     }
