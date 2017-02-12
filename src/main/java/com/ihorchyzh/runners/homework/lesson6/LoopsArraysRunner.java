@@ -103,6 +103,8 @@ public class LoopsArraysRunner {
                     case 8:
                         exit = true;
                         break;
+                    default:
+                        System.out.println("You entered wrong number. Required only number from the list! Try again!");
                 }
             } catch (InputMismatchException e) {
                 System.out.println("You entered incorrect symbol! Try again!");

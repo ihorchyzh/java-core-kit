@@ -24,47 +24,48 @@ public class Lesson4Runner {
                         "5. Check which of two numbers is bigger;\n\n" +
                         "6. Exit program.\n");
                 int userChoice = scanner.nextInt();
-                if (!((userChoice > 1) || (userChoice < 6))) {
-                    System.out.println("You entered wrong number. Required only number from the list! Try again!");
-                }
-                if (userChoice == 1) {
-                    System.out.println("Lets calculate circle Area...?\n");
-                    System.out.println("Type radius and press enter, please...");
-                    double radius = scanner.nextDouble();
-                    System.out.println("Area is " + lesson4.circleArea(radius));
-                }
-                if (userChoice == 2) {
-                    System.out.println("Lets find out which circle Area is bigger...?\n");
-                    System.out.println("Type the radius of the first circle and press enter");
-                    double firstCircleRadius = scanner.nextDouble();
-                    System.out.println("Type the radius of the second circle and press enter");
-                    double secondCircleRadius = scanner.nextDouble();
-                    System.out.println(lesson4.calculateBiggerCircleArea(firstCircleRadius, secondCircleRadius));
-                }
-                if (userChoice == 3) {
-                    System.out.println("Lets find out is this right-angled triangle...?\n");
-                    System.out.println("Type 3 sides of the triangle and press Enter each time");
-                    double sideA = scanner.nextDouble();
-                    double sideB = scanner.nextDouble();
-                    double sideC = scanner.nextDouble();
-                    System.out.println(lesson4.isRightAngledTriangle(sideA, sideB, sideC));
-                }
-                if (userChoice == 4) {
-                    System.out.println("Lets find out is this number Odd or Even...?\n");
-                    System.out.println("Type a number");
-                    int number = (int) scanner.nextDouble();
-                    System.out.println(lesson4.evenOrOdd(number));
-                }
-                if (userChoice == 5) {
-                    System.out.println("Lets find out which number is bigger...?\n");
-                    System.out.println("Type the first number and press Enter");
-                    double firstNumber = scanner.nextDouble();
-                    System.out.println("Type the second number and press Enter");
-                    double secondNumber = scanner.nextDouble();
-                    System.out.println(lesson4.isBigger(firstNumber, secondNumber));
-                }
-                if (userChoice == 6) {
-                    break;
+                switch (userChoice) {
+                    case 1:
+                        System.out.println("Lets calculate circle Area...?\n");
+                        System.out.println("Type radius and press enter, please...");
+                        double radius = scanner.nextDouble();
+                        System.out.println("Area is " + lesson4.circleArea(radius));
+                        break;
+                    case 2:
+                        System.out.println("Lets find out which circle Area is bigger...?\n");
+                        System.out.println("Type the radius of the first circle and press enter");
+                        double firstCircleRadius = scanner.nextDouble();
+                        System.out.println("Type the radius of the second circle and press enter");
+                        double secondCircleRadius = scanner.nextDouble();
+                        System.out.println(lesson4.calculateBiggerCircleArea(firstCircleRadius, secondCircleRadius));
+                        break;
+                    case 3:
+                        System.out.println("Lets find out is this right-angled triangle...?\n");
+                        System.out.println("Type 3 sides of the triangle and press Enter each time");
+                        double sideA = scanner.nextDouble();
+                        double sideB = scanner.nextDouble();
+                        double sideC = scanner.nextDouble();
+                        System.out.println(lesson4.isRightAngledTriangle(sideA, sideB, sideC));
+                        break;
+                    case 4:
+                        System.out.println("Lets find out is this number Odd or Even...?\n");
+                        System.out.println("Type a number");
+                        int number = (int) scanner.nextDouble();
+                        System.out.println(lesson4.evenOrOdd(number));
+                        break;
+                    case 5:
+                        System.out.println("Lets find out which number is bigger...?\n");
+                        System.out.println("Type the first number and press Enter");
+                        double firstNumber = scanner.nextDouble();
+                        System.out.println("Type the second number and press Enter");
+                        double secondNumber = scanner.nextDouble();
+                        System.out.println(lesson4.isBigger(firstNumber, secondNumber));
+                        break;
+                    case 6:
+                        System.exit(0);
+                        break;
+                    default:
+                        System.out.println("You entered wrong number. Required only number from the list! Try again!");
                 }
             } catch (InputMismatchException e) {
                 System.out.println("You entered incorrect symbol! Try again!");
