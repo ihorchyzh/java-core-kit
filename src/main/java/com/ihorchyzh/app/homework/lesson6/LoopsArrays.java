@@ -160,4 +160,9 @@ public class LoopsArrays {
                 .trim();
         return formattedVerticalMultiDimensionalArray;
     }
+
+//  TASK 2D. Generate array 8x5 and out the array.
+
+
+
 }
