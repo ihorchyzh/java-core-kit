@@ -1,7 +1,6 @@
 package com.ihorchyzh.runners.classwork.lesson7;
 
 import com.ihorchyzh.app.classwork.lesson7.Lesson7;
-import com.ihorchyzh.runners.classwork.lesson6.Lesson6Runner;
 
 import java.util.Arrays;
 

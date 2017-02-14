@@ -3,8 +3,6 @@ package com.ihorchyzh.app.homework.lesson6;
 import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
 
-import static com.ihorchyzh.runners.homework.lesson6.LoopsArraysRunner.*;
-
 /**
  * Created by ihorchyzh on 2/3/17.
  */
@@ -162,7 +160,6 @@ public class LoopsArrays {
     }
 
 //  TASK 2D. Generate array 8x5 and out the array.
-
 
 
 }
