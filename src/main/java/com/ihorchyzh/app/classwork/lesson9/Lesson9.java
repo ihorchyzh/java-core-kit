@@ -8,13 +8,13 @@ import java.util.Arrays;
 public class Lesson9 {
 
     public String concatenation(String firstName, String secondName) {
-        String name = firstName.concat(secondName) + "\n";
+        String name = firstName.concat(secondName);
         return name;
 
     }
 
     public String outArrayOfChars(char[] arrayOfChars) {
-        String array = Arrays.toString(arrayOfChars) + "\n";
+        String array = Arrays.toString(arrayOfChars);
         return array;
     }
 

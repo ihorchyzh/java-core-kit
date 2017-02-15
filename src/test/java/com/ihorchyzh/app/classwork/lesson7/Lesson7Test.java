@@ -3,14 +3,8 @@ package com.ihorchyzh.app.classwork.lesson7;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import sun.jvm.hotspot.oops.Array;
-
 import java.util.Arrays;
-
-import static org.hamcrest.CoreMatchers.both;
 import static org.hamcrest.CoreMatchers.containsString;
-import static org.junit.Assert.*;
-
 /**
  * Created by ihorchyzh on 2/9/17.
  */
