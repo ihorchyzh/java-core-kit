@@ -136,7 +136,7 @@ public class LoopsArrays {
         return minNumberInArray;
     }
 
-//  TASK 2D. Generate array 8x5 and out the array.
+//  TASK 2E. Generate array 8x5 and out the array.
 
     public int[][] multiDimensionalArray(int columns, int rows, int startOfSegment, int endOfSegment) {
 
@@ -159,7 +159,7 @@ public class LoopsArrays {
         return formattedVerticalMultiDimensionalArray;
     }
 
-//  TASK 2D. Generate array 8x5 and out the array.
+//  TASK 2G. Generate array 8x5 and out the printed array.
 
 
 }
