@@ -1,4 +1,4 @@
-package com.ihorchyzh.runners.homework.lesson9;
+package com.ihorchyzh.runners.homework;
 
 import com.ihorchyzh.app.homework.lesson9.Palindrome;
 

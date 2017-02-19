@@ -1,4 +1,4 @@
-package com.ihorchyzh.runners.classwork.lesson4;
+package com.ihorchyzh.runners.classwork;
 
 import com.ihorchyzh.app.classwork.lesson4.IfStatements;
 

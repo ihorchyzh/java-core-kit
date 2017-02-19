@@ -1,4 +1,4 @@
-package com.ihorchyzh.runners.classwork.lesson9;
+package com.ihorchyzh.runners.classwork;
 
 import com.ihorchyzh.app.classwork.lesson9.ArrayOperations;
 

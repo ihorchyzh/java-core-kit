@@ -1,4 +1,4 @@
-package com.ihorchyzh.runners.homework.lesson8;
+package com.ihorchyzh.runners.homework;
 
 import com.ihorchyzh.app.homework.lesson8.MultidimensionalArrays;
 

@@ -1,4 +1,4 @@
-package com.ihorchyzh.runners.classwork.lesson3;
+package com.ihorchyzh.runners.classwork;
 
 import com.ihorchyzh.app.classwork.lesson3.MathFunctions;
 

@@ -1,4 +1,4 @@
-package com.ihorchyzh.runners.classwork.lesson10;
+package com.ihorchyzh.runners.classwork;
 
 /**
  * Created by ihorchyzh on 2/16/17.

@@ -1,4 +1,4 @@
-package com.ihorchyzh.runners.homework.lesson10;
+package com.ihorchyzh.runners.homework;
 
 import com.ihorchyzh.app.homework.lesson10.ArrayParser;
 

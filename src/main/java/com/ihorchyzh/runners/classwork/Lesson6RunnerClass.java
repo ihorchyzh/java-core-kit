@@ -1,4 +1,4 @@
-package com.ihorchyzh.runners.classwork.lesson6;
+package com.ihorchyzh.runners.classwork;
 
 import java.util.Scanner;
 

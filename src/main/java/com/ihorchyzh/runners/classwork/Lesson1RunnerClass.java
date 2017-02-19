@@ -1,4 +1,4 @@
-package com.ihorchyzh.runners.classwork.lesson1;
+package com.ihorchyzh.runners.classwork;
 
 import com.ihorchyzh.app.classwork.lesson1.Casting;
 
