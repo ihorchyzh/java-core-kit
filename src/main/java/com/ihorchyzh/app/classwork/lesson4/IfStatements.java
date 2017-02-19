@@ -3,7 +3,7 @@ package com.ihorchyzh.app.classwork.lesson4;
 /**
  * Created by ihorchyzh on 1/26/17.
  */
-public class Lesson4Class {
+public class IfStatements {
 
     public static final double PI = 3.14d;
 

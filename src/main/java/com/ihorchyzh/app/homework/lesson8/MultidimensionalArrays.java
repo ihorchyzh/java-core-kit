@@ -5,7 +5,7 @@ import java.util.concurrent.ThreadLocalRandom;
 /**
  * Created by ihorchyzh on 2/12/17.
  */
-public class Lesson8Home {
+public class MultidimensionalArrays {
 
     ///   5 строк по 8 столбцов в каждой из случайных целых чисел из отрезка [-99;99]
 

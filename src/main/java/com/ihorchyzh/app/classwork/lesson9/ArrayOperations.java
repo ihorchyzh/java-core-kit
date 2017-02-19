@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * Created by ihorchyzh on 2/14/17.
  */
-public class Lesson9Class {
+public class ArrayOperations {
 
     public String concatenation(String firstName, String secondName) {
         String name = firstName.concat(secondName);
@@ -14,7 +14,7 @@ public class Lesson9Class {
     }
 
     public String outArrayOfChars(char[] arrayOfChars) {
-        String array = Arrays.toString(arrayOfChars);
+        String array = java.util.Arrays.toString(arrayOfChars);
         return array;
     }
 

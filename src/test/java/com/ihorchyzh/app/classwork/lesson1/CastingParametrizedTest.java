@@ -12,24 +12,24 @@ import org.junit.runner.RunWith;
  * Created by ihorchyzh on 2/1/17.
  */
 @RunWith(JUnitParamsRunner.class)
-public class Lesson1ClassParametrizedTest {
+public class CastingParametrizedTest {
 
-    Lesson1Class lesson1Class;
+    Casting casting;
 
     @Before
     public void setUp() {
-        lesson1Class = new Lesson1Class();
+        casting = new Casting();
     }
 
     @Test
     @FileParameters(value = "src/test/resources/lesson1Data/narrowingData.csv", mapper = CsvWithHeaderMapper.class)
     public void narrowingCastingParametrizedTest(float floatNumber, int expectedResult) {
-        Assert.assertEquals(expectedResult, lesson1Class.narrowing(floatNumber));
+        Assert.assertEquals(expectedResult, casting.narrowing(floatNumber));
     }
 
     @Test
     @FileParameters(value = "src/test/resources/lesson1Data/wideningData.csv", mapper = CsvWithHeaderMapper.class)
     public void additionTest(int intNumber, float expected) {
-        Assert.assertEquals(expected, lesson1Class.widening(intNumber), 0);
+        Assert.assertEquals(expected, casting.widening(intNumber), 0);
     }
 }

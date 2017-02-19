@@ -1,9 +1,9 @@
-package com.ihorchyzh.app.classwork.lesson0;
+package com.ihorchyzh.app.classwork.lesson1;
 
 /**
- * Created by ihorchyzh on 1/22/17.
+ * Created by ihorchyzh on 1/19/17.
  */
-public class Lesson0Class {
+public class Casting {
 
     public char floatToChar(float floatNumber) {
         char charSymbol = (char) floatNumber;
@@ -18,6 +18,17 @@ public class Lesson0Class {
     public int charToInt(char charSymbol) {
         int intNumber = (int) charSymbol;
         return intNumber;
+    }
+
+    public int narrowing(float floatNumber) {
+        int intNumber = (int) floatNumber;
+        return intNumber;
+
+    }
+
+    public float widening(int intNumber) {
+        float floatNumber = intNumber;
+        return floatNumber;
     }
 
 }

@@ -6,7 +6,7 @@ import java.util.concurrent.ThreadLocalRandom;
 /**
  * Created by ihorchyzh on 2/3/17.
  */
-public class Lesson6Home {
+public class ArrayFormat {
 
 //  TASK 1. Count arrays length
 
@@ -160,6 +160,7 @@ public class Lesson6Home {
     }
 
 //  TASK 2G. Generate array 8x5 and out the printed array.
+
 
 
 }

@@ -1,6 +1,6 @@
 package com.ihorchyzh.runners.homework.lesson9;
 
-import com.ihorchyzh.app.homework.lesson9.Lesson9Home;
+import com.ihorchyzh.app.homework.lesson9.Palindrome;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -29,27 +29,27 @@ public class Lesson9RunnerHome {
     }
 
     private static void choose(Scanner scanner) {
-        Lesson9Home lesson9Home = new Lesson9Home();
+        Palindrome palindrome = new Palindrome();
         System.out.println("Now choose one of the 5 methods to verify.");
         try {
             String userInput = scanner.nextLine();
             int userChoice = scanner.nextInt();
             switch (userChoice) {
                 case 1:
-                    System.out.println(lesson9Home.palindromeVer1(userInput));
+                    System.out.println(palindrome.palindromeCharAtMethod(userInput));
                     break;
                 case 2:
                     char[] charArray = userInput.toCharArray();
-                    System.out.println(lesson9Home.palindromeVer2(charArray));
+                    System.out.println(palindrome.palindromeToLowerCaseMethod(charArray));
                     break;
                 case 3:
-                    System.out.println(lesson9Home.palindromeVer3(userInput));
+                    System.out.println(palindrome.palindromeReverseMethod(userInput));
                     break;
                 case 4:
-                    System.out.println(lesson9Home.palindromeVer4(userInput));
+                    System.out.println(palindrome.palindromeEqualsIgnoreMethod(userInput));
                     break;
                 case 5:
-                    System.out.println(lesson9Home.palindromeVer5(userInput));
+                    System.out.println(palindrome.palindromeReverseCharAtMethod(userInput));
                     break;
                 default:
                     System.out.println("Wrong input. Try number from 1 to 5!");

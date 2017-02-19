@@ -3,11 +3,11 @@ package com.ihorchyzh.app.homework.lesson9;
 /**
  * Created by ihorchyzh on 2/14/17.
  */
-public class Lesson9Home {
+public class Palindrome {
 
-    public String palindromeVer1(String stringValue) {
+    public String palindromeCharAtMethod(String stringValue) {
         stringValue = stringValue.toLowerCase();
-        String result = null;
+        String result = "";
         for (int i = 0; i < stringValue.length() / 2; i++) {
             if (stringValue.charAt(i) == stringValue.charAt(stringValue.length() - i - 1)) {
                 result = "Palindrome";
@@ -18,8 +18,8 @@ public class Lesson9Home {
         return result;
     }
 
-    public String palindromeVer2(char[] charArray) {
-        String result = null;
+    public String palindromeToLowerCaseMethod(char[] charArray) {
+        String result = "";
         int start = 0;
         int end = charArray.length - 1;
         while (start < end) {
@@ -34,9 +34,9 @@ public class Lesson9Home {
         return result;
     }
 
-    public String palindromeVer3(String stringValue) {
+    public String palindromeReverseMethod(String stringValue) {
         stringValue = stringValue.toLowerCase();
-        String result = null;
+        String result;
         if (stringValue.equals(new StringBuilder(stringValue).reverse().toString())) {
             result = "Palindrome";
         } else {
@@ -45,8 +45,8 @@ public class Lesson9Home {
         return result;
     }
 
-    public String palindromeVer4(String stringValue) {
-        String result = null;
+    public String palindromeEqualsIgnoreMethod(String stringValue) {
+        String result;
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(stringValue);
         stringBuilder.reverse();
@@ -58,8 +58,8 @@ public class Lesson9Home {
         return result;
     }
 
-    public String palindromeVer5(String stringValue) {
-        String result = null;
+    public String palindromeReverseCharAtMethod(String stringValue) {
+        String result;
         String reverse = "";
         for (int i = stringValue.length() - 1; i >= 0; i--) {
             reverse = reverse + stringValue.charAt(i);

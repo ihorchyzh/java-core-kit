@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * Created by ihorchyzh on 2/9/17.
  */
-public class Lesson7Class {
+public class Loops {
 
     public int[] baubleSortSmallToBig1(int[] array) {
         boolean status = true;

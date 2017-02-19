@@ -7,20 +7,20 @@ import org.junit.Test;
 /**
  * Created by ihorchyzh on 1/31/17.
  */
-public class Lesson4ClassTest {
+public class IfStatementsTest {
     @Before
     public void setUp() throws Exception {
-        lesson4Class = new Lesson4Class();
+        ifStatements = new IfStatements();
     }
 
-    Lesson4Class lesson4Class;
+    IfStatements ifStatements;
 
     @Test
     public void circleAreaTest() throws Exception {
         double radius = 2;
         double expResult = 12.56;
         double delta = 0.01;
-        Assert.assertEquals(expResult, lesson4Class.circleArea(radius), delta);
+        Assert.assertEquals(expResult, ifStatements.circleArea(radius), delta);
     }
 
     @Test
@@ -28,7 +28,7 @@ public class Lesson4ClassTest {
         double firstCircleArea = 2;
         double secondCircleArea = 2;
         String expResult = "Circle Areas are equal";
-        Assert.assertEquals(expResult, lesson4Class.calculateBiggerCircleArea(firstCircleArea, secondCircleArea));
+        Assert.assertEquals(expResult, ifStatements.calculateBiggerCircleArea(firstCircleArea, secondCircleArea));
     }
 
     @Test
@@ -36,7 +36,7 @@ public class Lesson4ClassTest {
         double firstCircleArea = 4;
         double secondCircleArea = 2;
         String expResult = "First circle Area is bigger";
-        Assert.assertEquals(expResult, lesson4Class.calculateBiggerCircleArea(firstCircleArea, secondCircleArea));
+        Assert.assertEquals(expResult, ifStatements.calculateBiggerCircleArea(firstCircleArea, secondCircleArea));
     }
 
     @Test
@@ -44,7 +44,7 @@ public class Lesson4ClassTest {
         double firstCircleArea = 2;
         double secondCircleArea = 4;
         String expResult = "Second circle Area is bigger";
-        Assert.assertEquals(expResult, lesson4Class.calculateBiggerCircleArea(firstCircleArea, secondCircleArea));
+        Assert.assertEquals(expResult, ifStatements.calculateBiggerCircleArea(firstCircleArea, secondCircleArea));
     }
 
     @Test
@@ -53,7 +53,7 @@ public class Lesson4ClassTest {
         double sideB = 4;
         double sideC = 5;
         String expResult = "This is right-angled triangle!";
-        Assert.assertEquals(expResult, lesson4Class.isRightAngledTriangle(sideA, sideB, sideC));
+        Assert.assertEquals(expResult, ifStatements.isRightAngledTriangle(sideA, sideB, sideC));
     }
 
     @Test
@@ -62,7 +62,7 @@ public class Lesson4ClassTest {
         double sideB = 5;
         double sideC = 4;
         String expResult = "This is right-angled triangle!";
-        Assert.assertEquals(expResult, lesson4Class.isRightAngledTriangle(sideA, sideB, sideC));
+        Assert.assertEquals(expResult, ifStatements.isRightAngledTriangle(sideA, sideB, sideC));
     }
 
     @Test
@@ -71,7 +71,7 @@ public class Lesson4ClassTest {
         double sideB = 4;
         double sideC = 3;
         String expResult = "This is right-angled triangle!";
-        Assert.assertEquals(expResult, lesson4Class.isRightAngledTriangle(sideA, sideB, sideC));
+        Assert.assertEquals(expResult, ifStatements.isRightAngledTriangle(sideA, sideB, sideC));
     }
 
     @Test
@@ -80,7 +80,7 @@ public class Lesson4ClassTest {
         double sideB = 8;
         double sideC = 10;
         String expResult = "You have not right-angled triangle";
-        Assert.assertEquals(expResult, lesson4Class.isRightAngledTriangle(sideA, sideB, sideC));
+        Assert.assertEquals(expResult, ifStatements.isRightAngledTriangle(sideA, sideB, sideC));
     }
 
 
@@ -88,14 +88,14 @@ public class Lesson4ClassTest {
     public void evenOrOddIsEvenTest() throws Exception {
         int number = 2;
         String expResult = "The number is even";
-        Assert.assertEquals(expResult, lesson4Class.evenOrOdd(number));
+        Assert.assertEquals(expResult, ifStatements.evenOrOdd(number));
     }
 
     @Test
     public void evenOrOddIsOddTest() throws Exception {
         int number = 3;
         String expResult = "The number is odd";
-        Assert.assertEquals(expResult, lesson4Class.evenOrOdd(number));
+        Assert.assertEquals(expResult, ifStatements.evenOrOdd(number));
     }
 
     @Test
@@ -103,7 +103,7 @@ public class Lesson4ClassTest {
         double firstNumber = 2;
         double secondNumber = 2;
         String expResult = "Numbers are equal";
-        Assert.assertEquals(expResult, lesson4Class.isBigger(firstNumber, secondNumber));
+        Assert.assertEquals(expResult, ifStatements.isBigger(firstNumber, secondNumber));
     }
 
     @Test
@@ -111,7 +111,7 @@ public class Lesson4ClassTest {
         double firstNumber = 3;
         double secondNumber = 2;
         String expResult = "The first number is bigger";
-        Assert.assertEquals(expResult, lesson4Class.isBigger(firstNumber, secondNumber));
+        Assert.assertEquals(expResult, ifStatements.isBigger(firstNumber, secondNumber));
     }
 
     @Test
@@ -119,6 +119,6 @@ public class Lesson4ClassTest {
         double firstNumber = 2;
         double secondNumber = 3;
         String expResult = "The second number is bigger";
-        Assert.assertEquals(expResult, lesson4Class.isBigger(firstNumber, secondNumber));
+        Assert.assertEquals(expResult, ifStatements.isBigger(firstNumber, secondNumber));
     }
 }

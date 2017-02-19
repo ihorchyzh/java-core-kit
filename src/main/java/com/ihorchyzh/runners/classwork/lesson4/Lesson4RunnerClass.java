@@ -1,6 +1,6 @@
 package com.ihorchyzh.runners.classwork.lesson4;
 
-import com.ihorchyzh.app.classwork.lesson4.Lesson4Class;
+import com.ihorchyzh.app.classwork.lesson4.IfStatements;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -13,7 +13,7 @@ public class Lesson4RunnerClass {
     public static void main(String[] args) {
         do {
             try {
-                Lesson4Class lesson4Class = new Lesson4Class();
+                IfStatements ifStatements = new IfStatements();
                 Scanner scanner = new Scanner(System.in);
                 System.out.println("\nHi! Here is an app that can perform some calculations. " +
                         "All you need it is type corresponding number and press Enter:\n\n" +
@@ -29,7 +29,7 @@ public class Lesson4RunnerClass {
                         System.out.println("Lets calculate circle Area...?\n");
                         System.out.println("Type radius and press enter, please...");
                         double radius = scanner.nextDouble();
-                        System.out.println("Area is " + lesson4Class.circleArea(radius));
+                        System.out.println("Area is " + ifStatements.circleArea(radius));
                         break;
                     case 2:
                         System.out.println("Lets find out which circle Area is bigger...?\n");
@@ -37,7 +37,7 @@ public class Lesson4RunnerClass {
                         double firstCircleRadius = scanner.nextDouble();
                         System.out.println("Type the radius of the second circle and press enter");
                         double secondCircleRadius = scanner.nextDouble();
-                        System.out.println(lesson4Class.calculateBiggerCircleArea(firstCircleRadius, secondCircleRadius));
+                        System.out.println(ifStatements.calculateBiggerCircleArea(firstCircleRadius, secondCircleRadius));
                         break;
                     case 3:
                         System.out.println("Lets find out is this right-angled triangle...?\n");
@@ -45,13 +45,13 @@ public class Lesson4RunnerClass {
                         double sideA = scanner.nextDouble();
                         double sideB = scanner.nextDouble();
                         double sideC = scanner.nextDouble();
-                        System.out.println(lesson4Class.isRightAngledTriangle(sideA, sideB, sideC));
+                        System.out.println(ifStatements.isRightAngledTriangle(sideA, sideB, sideC));
                         break;
                     case 4:
                         System.out.println("Lets find out is this number Odd or Even...?\n");
                         System.out.println("Type a number");
                         int number = (int) scanner.nextDouble();
-                        System.out.println(lesson4Class.evenOrOdd(number));
+                        System.out.println(ifStatements.evenOrOdd(number));
                         break;
                     case 5:
                         System.out.println("Lets find out which number is bigger...?\n");
@@ -59,7 +59,7 @@ public class Lesson4RunnerClass {
                         double firstNumber = scanner.nextDouble();
                         System.out.println("Type the second number and press Enter");
                         double secondNumber = scanner.nextDouble();
-                        System.out.println(lesson4Class.isBigger(firstNumber, secondNumber));
+                        System.out.println(ifStatements.isBigger(firstNumber, secondNumber));
                         break;
                     case 6:
                         System.exit(0);

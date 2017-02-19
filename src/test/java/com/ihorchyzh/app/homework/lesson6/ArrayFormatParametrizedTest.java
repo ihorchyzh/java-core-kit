@@ -13,19 +13,19 @@ import org.junit.runner.RunWith;
  * Created by ihorchyzh on 2/9/17.
  */
 @RunWith(JUnitParamsRunner.class)
-public class Lesson6HomeParametrizedTest {
+public class ArrayFormatParametrizedTest {
 
-    Lesson6Home lesson6Home;
+    ArrayFormat arrayFormat;
 
     @Before
     public void setUp() {
-        lesson6Home = new Lesson6Home();
+        arrayFormat = new ArrayFormat();
     }
 
     @Ignore
     @Test
     @FileParameters(value = "src/test/resources/lesson5Data/testData.csv", mapper = CsvWithHeaderMapper.class)
     public void oddArrayElementOut(int arrayLength, int[] expResult) throws Exception {
-        Assert.assertArrayEquals(expResult, lesson6Home.oddArrayElementOut(arrayLength));
+        Assert.assertArrayEquals(expResult, arrayFormat.oddArrayElementOut(arrayLength));
     }
 }

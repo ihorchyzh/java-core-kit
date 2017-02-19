@@ -3,7 +3,7 @@ package com.ihorchyzh.app.homework.lesson1;
 /**
  * Created by ihorchyzh on 1/29/17.
  */
-public class Lesson1Home {
+public class Primitives {
 
     byte b = 26;
     short s = 2034;

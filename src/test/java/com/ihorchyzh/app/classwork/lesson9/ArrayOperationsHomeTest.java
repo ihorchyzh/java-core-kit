@@ -7,13 +7,13 @@ import org.junit.Test;
 /**
  * Created by Igor Chyzh on 2/15/2017.
  */
-public class Lesson9ClassHomeTest {
+public class ArrayOperationsHomeTest {
 
-    Lesson9Class lesson9Class;
+    ArrayOperations arrayOperations;
 
     @Before
     public void setUp() throws Exception {
-        lesson9Class = new Lesson9Class();
+        arrayOperations = new ArrayOperations();
     }
 
     @Test
@@ -21,84 +21,84 @@ public class Lesson9ClassHomeTest {
         String firstName = "Mike ";
         String secondName = "\u0066";
         String expResult = "Mike \u0066";
-        Assert.assertEquals(expResult, lesson9Class.concatenation(firstName, secondName));
+        Assert.assertEquals(expResult, arrayOperations.concatenation(firstName, secondName));
     }
 
     @Test
     public void outArrayOfChars() throws Exception {
         char[] arrayOfChars = {'6', 64, 'g', '\u0066'};
         String expResult = "[6, @, g, f]";
-        Assert.assertEquals(expResult, lesson9Class.outArrayOfChars(arrayOfChars));
+        Assert.assertEquals(expResult, arrayOperations.outArrayOfChars(arrayOfChars));
     }
 
     @Test
     public void outArrayOfChars2() throws Exception {
         char[] arrayOfChars = {'6', 64, 'g', '\u0066'};
         String expResult = "6@gf";
-        Assert.assertEquals(expResult, lesson9Class.outArrayOfChars2(arrayOfChars));
+        Assert.assertEquals(expResult, arrayOperations.outArrayOfChars2(arrayOfChars));
     }
 
     @Test
     public void byteToString() throws Exception {
         byte byteValue = 20;
         String expResult = "20";
-        Assert.assertEquals(expResult, lesson9Class.byteToString(byteValue));
+        Assert.assertEquals(expResult, arrayOperations.byteToString(byteValue));
     }
 
     @Test
     public void stringToByte() throws Exception {
         String stringValue = "20";
         byte expResult = 20;
-        Assert.assertEquals(expResult, lesson9Class.stringToByte(stringValue));
+        Assert.assertEquals(expResult, arrayOperations.stringToByte(stringValue));
     }
 
     @Test
     public void shortToString() throws Exception {
         short shortValue = 50;
         String expResult = "50";
-        Assert.assertEquals(expResult, lesson9Class.shortToString(shortValue));
+        Assert.assertEquals(expResult, arrayOperations.shortToString(shortValue));
     }
 
     @Test
     public void stringToShort() throws Exception {
         String stringValue = "50";
         short expResult = 50;
-        Assert.assertEquals(expResult, lesson9Class.stringToShort(stringValue));
+        Assert.assertEquals(expResult, arrayOperations.stringToShort(stringValue));
     }
 
     @Test
     public void intToString() throws Exception {
         int intValue = 70;
         String expResult = "70";
-        Assert.assertEquals(expResult, lesson9Class.intToString(intValue));
+        Assert.assertEquals(expResult, arrayOperations.intToString(intValue));
     }
 
     @Test
     public void stringToInt() throws Exception {
         String stringValue = "70";
         int expResult = 70;
-        Assert.assertEquals(expResult, lesson9Class.stringToInt(stringValue));
+        Assert.assertEquals(expResult, arrayOperations.stringToInt(stringValue));
     }
 
     @Test
     public void longToString() throws Exception {
         long longValue = 46446464646464L;
         String expResult = "46446464646464";
-        Assert.assertEquals(expResult, lesson9Class.longToString(longValue));
+        Assert.assertEquals(expResult, arrayOperations.longToString(longValue));
     }
 
     @Test
     public void stringToLong() throws Exception {
         String stringValue = "46446464646464";
         long expResult = 46446464646464L;
-        Assert.assertEquals(expResult, lesson9Class.stringToLong(stringValue));
+        Assert.assertEquals(expResult, arrayOperations.stringToLong(stringValue));
     }
 
     @Test
     public void floatToString() throws Exception {
         float floatValue = 155f;
         String expResult = "155.0";
-        Assert.assertEquals(expResult, lesson9Class.floatToString(floatValue));
+        Assert.assertEquals(expResult, arrayOperations.floatToString(floatValue));
     }
 
     @Test
@@ -106,14 +106,14 @@ public class Lesson9ClassHomeTest {
         String stringValue = "155.0";
         float expResult = 155f;
         float delta = 1f;
-        Assert.assertEquals(expResult, lesson9Class.stringToFloat(stringValue), delta);
+        Assert.assertEquals(expResult, arrayOperations.stringToFloat(stringValue), delta);
     }
 
     @Test
     public void doubleToString() throws Exception {
         double doubleValue = 200d;
         String expResult = "200.0";
-        Assert.assertEquals(expResult, lesson9Class.doubleToString(doubleValue));
+        Assert.assertEquals(expResult, arrayOperations.doubleToString(doubleValue));
     }
 
     @Test
@@ -121,20 +121,20 @@ public class Lesson9ClassHomeTest {
         String stringValue = "200";
         double expResult = 200d;
         double delta = 1d;
-        Assert.assertEquals(expResult, lesson9Class.stringToDouble(stringValue), delta);
+        Assert.assertEquals(expResult, arrayOperations.stringToDouble(stringValue), delta);
     }
 
     @Test
     public void booleanToString() throws Exception {
         boolean booleanValue = true;
         String expResult = "true";
-        Assert.assertEquals(expResult, lesson9Class.booleanToString(booleanValue));
+        Assert.assertEquals(expResult, arrayOperations.booleanToString(booleanValue));
     }
 
     @Test
     public void stringToBoolean() throws Exception {
         String stringValue = "false";
-        Assert.assertFalse(lesson9Class.stringToBoolean(stringValue));
+        Assert.assertFalse(arrayOperations.stringToBoolean(stringValue));
     }
 
 }

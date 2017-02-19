@@ -4,7 +4,7 @@ package com.ihorchyzh.app.classwork.lesson3;
  * Created by ihorchyzh on 1/23/17.
  */
 
-public class Lesson3Class {
+public class MathFunctions {
 
     public int multiply(int a, int b) {
         int result = a * b;

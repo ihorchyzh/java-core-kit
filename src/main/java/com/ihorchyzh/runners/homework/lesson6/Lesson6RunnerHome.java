@@ -1,6 +1,6 @@
 package com.ihorchyzh.runners.homework.lesson6;
 
-import com.ihorchyzh.app.homework.lesson6.Lesson6Home;
+import com.ihorchyzh.app.homework.lesson6.ArrayFormat;
 
 import java.util.Arrays;
 import java.util.InputMismatchException;
@@ -33,7 +33,7 @@ public class Lesson6RunnerHome {
         do {
             try {
 
-                Lesson6Home lesson6Home = new Lesson6Home();
+                ArrayFormat arrayFormat = new ArrayFormat();
                 Scanner scanner = new Scanner(System.in);
                 System.out.println("\nHi! Here is an app that can perform some actions with arrays. " +
                         "All you need it is type corresponding number and press Enter:\n\n" +
@@ -47,57 +47,57 @@ public class Lesson6RunnerHome {
                 int userChoice = scanner.nextInt();
                 switch (userChoice) {
                     case 1:
-                        int evenArrayLength = lesson6Home.evenArrayLengthCount(
+                        int evenArrayLength = arrayFormat.evenArrayLengthCount(
                                 START_NUMBER_OF_EVEN_ARRAY, END_NUMBER_OF_EVEN_ARRAY
                         );
-                        int[] evenArray = lesson6Home.evenArrayElementOut(evenArrayLength);
-                        System.out.println(lesson6Home.formattedHorizontalArray(evenArray) + "\n");
-                        System.out.println(lesson6Home.formattedVerticalArray(evenArray));
+                        int[] evenArray = arrayFormat.evenArrayElementOut(evenArrayLength);
+                        System.out.println(arrayFormat.formattedHorizontalArray(evenArray) + "\n");
+                        System.out.println(arrayFormat.formattedVerticalArray(evenArray));
                         break;
                     case 2:
-                        int oddArrayLength = lesson6Home.oddArrayLengthCount(
+                        int oddArrayLength = arrayFormat.oddArrayLengthCount(
                                 START_NUMBER_OF_ODD_ARRAY, END_NUMBER_OF_ODD_ARRAY
                         );
-                        int[] oddArray = lesson6Home.oddArrayElementOut(oddArrayLength);
-                        System.out.println(lesson6Home.formattedHorizontalArray(oddArray));
-                        int[] oddArrayReverse = lesson6Home.reverseArray(oddArray);
-                        System.out.println(lesson6Home.formattedHorizontalArray(oddArrayReverse));
+                        int[] oddArray = arrayFormat.oddArrayElementOut(oddArrayLength);
+                        System.out.println(arrayFormat.formattedHorizontalArray(oddArray));
+                        int[] oddArrayReverse = arrayFormat.reverseArray(oddArray);
+                        System.out.println(arrayFormat.formattedHorizontalArray(oddArrayReverse));
                         break;
                     case 3:
-                        int[] randomGeneratedArray2C = lesson6Home.randomGeneratedArray2C(
+                        int[] randomGeneratedArray2C = arrayFormat.randomGeneratedArray2C(
                                 RANDOM_GENERATED_ARRAY_LENGTH, START_NUMBER_OF_SEGMENT_TASK_2C,
                                 END_NUMBER_OF_SEGMENT_TASK_2C
                         );
                         System.out.println(Arrays.toString(randomGeneratedArray2C));
                         System.out.println("\n There are " +
-                                lesson6Home.countOfEvenNumbersInArray(randomGeneratedArray2C) +
+                                arrayFormat.countOfEvenNumbersInArray(randomGeneratedArray2C) +
                                 " even numbers in the array.");
                         break;
                     case 4:
-                        int[] randomGeneratedArray2D = lesson6Home.randomGeneratedArray2D(
+                        int[] randomGeneratedArray2D = arrayFormat.randomGeneratedArray2D(
                                 RANDOM_GENERATED_ARRAY_LENGTH, START_NUMBER_OF_SEGMENT_TASK_2D,
                                 END_NUMBER_OF_SEGMENT_TASK_2D
                         );
                         System.out.println(Arrays.toString(randomGeneratedArray2D));
                         System.out.println("\nThe maximum number in array is " +
-                                lesson6Home.maxNumberInArray(randomGeneratedArray2D));
+                                arrayFormat.maxNumberInArray(randomGeneratedArray2D));
                         System.out.println("\nThe minimum number in array is " +
-                                lesson6Home.minNumberInArray(randomGeneratedArray2D));
+                                arrayFormat.minNumberInArray(randomGeneratedArray2D));
                         break;
                     case 5:
-                        int[][] multiDimensionalArray = lesson6Home.multiDimensionalArray(
+                        int[][] multiDimensionalArray = arrayFormat.multiDimensionalArray(
                                 MULTI_DIMENSIONAL_ARRAY_COLUMNS, MULTI_DIMENSIONAL_ARRAY_ROWS,
                                 START_NUMBER_OF_SEGMENT_TASK_2E, END_NUMBER_OF_SEGMENT_TASK_2E
                         );
-                        String multiDimensionalArrayString = lesson6Home.formattedVerticalMultiDimensionalArray(multiDimensionalArray);
+                        String multiDimensionalArrayString = arrayFormat.formattedVerticalMultiDimensionalArray(multiDimensionalArray);
                         System.out.println(multiDimensionalArrayString);
                         break;
                     case 6:
-                        int[][] multiDimensionalArrayFormatted = lesson6Home.multiDimensionalArray(
+                        int[][] multiDimensionalArrayFormatted = arrayFormat.multiDimensionalArray(
                                 MULTI_DIMENSIONAL_ARRAY_COLUMNS, MULTI_DIMENSIONAL_ARRAY_ROWS,
                                 START_NUMBER_OF_SEGMENT_TASK_2F, END_NUMBER_OF_SEGMENT_TASK_2F
                         );
-                        String multiDimensionalArrayFormattedString = lesson6Home.formattedVerticalMultiDimensionalArray(multiDimensionalArrayFormatted);
+                        String multiDimensionalArrayFormattedString = arrayFormat.formattedVerticalMultiDimensionalArray(multiDimensionalArrayFormatted);
                         System.out.printf("%4s", multiDimensionalArrayFormattedString);
                         break;
                     case 8:

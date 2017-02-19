@@ -1,6 +1,6 @@
 package com.ihorchyzh.app.classwork.lesson5;
 
-import com.ihorchyzh.app.classwork.lesson3.Lesson3Class;
+import com.ihorchyzh.app.classwork.lesson3.MathFunctions;
 import junitparams.FileParameters;
 import junitparams.JUnitParamsRunner;
 import junitparams.mappers.CsvWithHeaderMapper;
@@ -16,21 +16,21 @@ public class BasicParametrizedTests {
 
     @Before
     public void setUp() {
-        lesson3Class = new Lesson3Class();
+        mathFunctions = new MathFunctions();
     }
 
-    Lesson3Class lesson3Class;
+    MathFunctions mathFunctions;
 
     @Test
     @FileParameters(value = "src/test/resources/lesson5Data/testData.csv", mapper = CsvWithHeaderMapper.class)
     public void multiplyTest(int a, int b, int expected) {
-        Assert.assertEquals(expected, lesson3Class.multiply(a, b));
+        Assert.assertEquals(expected, mathFunctions.multiply(a, b));
     }
 
     @Test
     @FileParameters(value = "src/test/resources/lesson5Data/additionTestData.csv", mapper = CsvWithHeaderMapper.class)
     public void additionTest(String a, String b, String expected) {
-        Assert.assertEquals(expected, lesson3Class.addition(a, b));
+        Assert.assertEquals(expected, mathFunctions.addition(a, b));
     }
 
 }

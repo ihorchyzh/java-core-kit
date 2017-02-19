@@ -12,62 +12,62 @@ import org.junit.runner.RunWith;
  * Created by ihorchyzh on 2/1/17.
  */
 @RunWith(JUnitParamsRunner.class)
-public class Lesson3ClassParametrizedTest {
+public class MathFunctionsParametrizedTest {
 
     public static final double DELTA = 0.01;
-    Lesson3Class lesson3Class;
+    MathFunctions mathFunctions;
 
     @Before
     public void setUp() {
-        lesson3Class = new Lesson3Class();
+        mathFunctions = new MathFunctions();
     }
 
     @Test
     @FileParameters(value = "src/test/resources/lesson3Data/multiplyTestData.csv", mapper = CsvWithHeaderMapper.class)
     public void multiplyTest(int a, int b, int expRes) {
-        Assert.assertEquals(expRes, lesson3Class.multiply(a, b));
+        Assert.assertEquals(expRes, mathFunctions.multiply(a, b));
     }
 
     @Test
     @FileParameters(value = "src/test/resources/lesson3Data/additionTestData.csv", mapper = CsvWithHeaderMapper.class)
     public void additionTest(String a, String b, String expRes) {
-        Assert.assertEquals(expRes, lesson3Class.addition(a, b));
+        Assert.assertEquals(expRes, mathFunctions.addition(a, b));
     }
 
     @Test
     @FileParameters(value = "src/test/resources/lesson3Data/subtractionTestData.csv", mapper = CsvWithHeaderMapper.class)
     public void subtractionTest(int a, int b, int expRes) {
-        Assert.assertEquals(expRes, lesson3Class.subtraction(a, b));
+        Assert.assertEquals(expRes, mathFunctions.subtraction(a, b));
     }
 
     @Test
     @FileParameters(value = "src/test/resources/lesson3Data/chooseMaxNumberTestData.csv", mapper = CsvWithHeaderMapper.class)
     public void chooseMaxNumberTest(double a, double b, double expRes) {
-        Assert.assertEquals(expRes, lesson3Class.chooseMaxNumber(a, b), DELTA);
+        Assert.assertEquals(expRes, mathFunctions.chooseMaxNumber(a, b), DELTA);
     }
 
     @Test
     public void getSquareRoot() {
         double a = 25.0d, expRes = 5.0d;
-        Assert.assertEquals(expRes, lesson3Class.getSquareRoot(a), DELTA);
+        Assert.assertEquals(expRes, mathFunctions.getSquareRoot(a), DELTA);
     }
 
     @Test
     public void powerTest() {
         double a = 2.0d, b = 3.0d, expRes = 9.0d;
-        Assert.assertNotEquals(expRes, lesson3Class.power(a, b), DELTA);
+        Assert.assertNotEquals(expRes, mathFunctions.power(a, b), DELTA);
     }
 
     @Test
     public void isOddNumberTrueTest() {
         int number = 3;
-        Assert.assertTrue(lesson3Class.isOddNumber(number));
+        Assert.assertTrue(mathFunctions.isOddNumber(number));
     }
 
     @Test
     public void isOddNumberFalseTest() {
         int number = 4;
-        Assert.assertFalse(lesson3Class.isOddNumber(number));
+        Assert.assertFalse(mathFunctions.isOddNumber(number));
     }
 
 
