@@ -1,7 +1,5 @@
 package com.ihorchyzh.app.classwork.lesson9;
 
-import java.util.Arrays;
-
 /**
  * Created by ihorchyzh on 2/14/17.
  */

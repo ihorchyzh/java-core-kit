@@ -162,5 +162,4 @@ public class ArrayFormat {
 //  TASK 2G. Generate array 8x5 and out the printed array.
 
 
-
 }

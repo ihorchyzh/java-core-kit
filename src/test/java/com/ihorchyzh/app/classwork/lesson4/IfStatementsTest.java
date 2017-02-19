@@ -8,12 +8,12 @@ import org.junit.Test;
  * Created by ihorchyzh on 1/31/17.
  */
 public class IfStatementsTest {
+    IfStatements ifStatements;
+
     @Before
     public void setUp() throws Exception {
         ifStatements = new IfStatements();
     }
-
-    IfStatements ifStatements;
 
     @Test
     public void circleAreaTest() throws Exception {

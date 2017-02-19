@@ -59,6 +59,8 @@ public class ArrayParser {
         String result = "";
         if (input.contains(keyWord)) {
             result = input.replace(keyWord, "\n");
+        } else {
+            result = input;
         }
         return result;
     }

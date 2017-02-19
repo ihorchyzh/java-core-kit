@@ -32,14 +32,14 @@ public class PalindromeTest {
 
     @Test
     public void palindromeToLowerCaseMethod() throws Exception {
-        char[] charArray = {'p','a','R','A','R','p','a'};
+        char[] charArray = {'p', 'a', 'R', 'A', 'R', 'p', 'a'};
         String expResult = "Palindrome";
         Assert.assertEquals(expResult, palindrome.palindromeToLowerCaseMethod(charArray));
     }
 
     @Test
     public void notPalindromeToLowerCaseMethod() throws Exception {
-        char[] charArray = {'p','a','A','R','p','a'};
+        char[] charArray = {'p', 'a', 'A', 'R', 'p', 'a'};
         String expResult = "Not palindrome";
         Assert.assertEquals(expResult, palindrome.palindromeToLowerCaseMethod(charArray));
     }

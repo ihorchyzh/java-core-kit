@@ -31,48 +31,6 @@ public class BasicTests {
         expectedResults = readTheFile(EXPECTED_RESULTS);
     }
 
-    @Before
-    public void preConditionsForTest() throws IOException {
-        inputData = readTheFile(INPUT_DATA);
-    }
-
-    @Test
-    public void aFirstTest() {
-
-//because tests in alphabetical order we use 'a', 'b' to order tests
-        System.out.println("Simple sorting test");
-        Arrays.sort(inputData);
-        Assert.assertArrayEquals(expectedResults, inputData);
-    }
-
-    @Test
-    public void bSecondTest() {
-        System.out.println("Parallel sorting test");
-        Arrays.parallelSort(inputData);
-        Assert.assertArrayEquals(expectedResults, inputData);
-    }
-
-//    @Test(timeout = 1000)
-//    public void infinityTest() {
-//        while (true) ;
-//    }
-
-//    @Ignore("Not ready yet")
-//
-//    @Test(timeout = 1000)
-//    public void thisTestNotReady() {
-//
-//    }
-
-    @After
-    public void postConditionsForTest() {
-        // of course java has garbage collector and this method now useless
-        // but imagine if as results of our test we have some data in database
-        // so after steps used to clean things, that will not be clean automatically
-        inputData = null;
-
-    }
-
     @AfterClass
     public static void postConditionsForClass() {
         expectedResults = null;
@@ -97,5 +55,47 @@ public class BasicTests {
             result[i] = Integer.valueOf(array[i]);
         }
         return result;
+    }
+
+//    @Test(timeout = 1000)
+//    public void infinityTest() {
+//        while (true) ;
+//    }
+
+//    @Ignore("Not ready yet")
+//
+//    @Test(timeout = 1000)
+//    public void thisTestNotReady() {
+//
+//    }
+
+    @Before
+    public void preConditionsForTest() throws IOException {
+        inputData = readTheFile(INPUT_DATA);
+    }
+
+    @Test
+    public void aFirstTest() {
+
+//because tests in alphabetical order we use 'a', 'b' to order tests
+        System.out.println("Simple sorting test");
+        Arrays.sort(inputData);
+        Assert.assertArrayEquals(expectedResults, inputData);
+    }
+
+    @Test
+    public void bSecondTest() {
+        System.out.println("Parallel sorting test");
+        Arrays.parallelSort(inputData);
+        Assert.assertArrayEquals(expectedResults, inputData);
+    }
+
+    @After
+    public void postConditionsForTest() {
+        // of course java has garbage collector and this method now useless
+        // but imagine if as results of our test we have some data in database
+        // so after steps used to clean things, that will not be clean automatically
+        inputData = null;
+
     }
 }

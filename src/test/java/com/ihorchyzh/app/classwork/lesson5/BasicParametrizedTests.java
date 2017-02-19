@@ -4,7 +4,9 @@ import com.ihorchyzh.app.classwork.lesson3.MathFunctions;
 import junitparams.FileParameters;
 import junitparams.JUnitParamsRunner;
 import junitparams.mappers.CsvWithHeaderMapper;
-import org.junit.*;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
@@ -14,12 +16,12 @@ import org.junit.runner.RunWith;
 @RunWith(JUnitParamsRunner.class)
 public class BasicParametrizedTests {
 
+    MathFunctions mathFunctions;
+
     @Before
     public void setUp() {
         mathFunctions = new MathFunctions();
     }
-
-    MathFunctions mathFunctions;
 
     @Test
     @FileParameters(value = "src/test/resources/lesson5Data/testData.csv", mapper = CsvWithHeaderMapper.class)

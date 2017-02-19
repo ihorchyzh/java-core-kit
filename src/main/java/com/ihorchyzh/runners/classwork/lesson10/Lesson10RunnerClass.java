@@ -64,7 +64,7 @@ public class Lesson10RunnerClass {
 
         for (int i = 0; i < alphabet.length; i++) {
             for (int j = 0; j < cipher.length; j++) {
-                if (stringBuilder.charAt(i) == stringBuilder.charAt(j)){
+                if (stringBuilder.charAt(i) == stringBuilder.charAt(j)) {
 
                 }
             }
