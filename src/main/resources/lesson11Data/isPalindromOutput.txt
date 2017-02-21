@@ -1,0 +1,2 @@
+moom is palindrome!
+mmmn is not palindrome!
