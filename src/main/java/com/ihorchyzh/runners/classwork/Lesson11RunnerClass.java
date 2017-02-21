@@ -42,8 +42,7 @@ public class Lesson11RunnerClass {
     public static void readFileTryCatch() {
         try {
             BufferedReader bufferedReader = new BufferedReader(
-                    new FileReader(INPUT)
-            );
+                    new FileReader(INPUT));
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 System.out.println(line);
