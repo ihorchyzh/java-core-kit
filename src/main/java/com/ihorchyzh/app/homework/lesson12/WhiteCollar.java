@@ -18,7 +18,7 @@ public class WhiteCollar extends Human {
     private boolean checkCompanyName(String companyName) {
         boolean result = false;
         for (char ch : company.toCharArray()) {
-            if (Character.isLetter(ch) | !Character.isSpaceChar(ch) | ch == '-' | ch == ',') {
+            if (Character.isLetter(ch) || !Character.isSpaceChar(ch) || ch == '-' || ch == ',') {
                 result = true;
             } else {
                 result = false;
