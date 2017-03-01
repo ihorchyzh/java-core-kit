@@ -7,6 +7,11 @@ public class WhiteCollar extends Human {
 
     private String company;
 
+    public WhiteCollar(int age, String name, String company) {
+        super(age, name);
+        this.company = company;
+    }
+
     public void setCompany(String company) {
         if (checkCompanyName(company)) {
             this.company = company;
@@ -15,25 +20,16 @@ public class WhiteCollar extends Human {
         }
     }
 
-    private boolean checkCompanyName(String companyName) {
+    private boolean checkCompanyName(String company) {
         boolean result = false;
         for (char ch : company.toCharArray()) {
-            if (Character.isLetter(ch) || !Character.isSpaceChar(ch) || ch == '-' || ch == ',') {
-                result = true;
-            } else {
-                result = false;
-            }
+            result = Character.isLetter(ch) || !Character.isSpaceChar(ch) || ch == '-' || ch == ',';
         }
         return result;
     }
 
     public String getCompany() {
         return company;
-    }
-
-    public WhiteCollar(int age, String name, String company) {
-        super(age, name);
-        this.company = company;
     }
 
 }
