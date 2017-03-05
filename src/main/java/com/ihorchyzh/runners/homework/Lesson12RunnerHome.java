@@ -40,7 +40,6 @@ public class Lesson12RunnerHome {
         System.out.println(whiteCollar.getName());
         System.out.println(whiteCollar.getCompany());
 
-
     }
 
 }
