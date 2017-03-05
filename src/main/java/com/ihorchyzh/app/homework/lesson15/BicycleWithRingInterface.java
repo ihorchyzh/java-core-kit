@@ -5,6 +5,6 @@ package com.ihorchyzh.app.homework.lesson15;
  */
 public interface BicycleWithRingInterface {
 
-    public void ring();
+    void ring();
 
 }
