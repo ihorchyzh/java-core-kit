@@ -33,7 +33,7 @@ public class StringBuilderOperations {
         int counter = 0;
         char[] chars = input.toCharArray();
         for (char ch : chars) {
-            if (Character.isAlphabetic(input.charAt(ch))) {
+            if (Character.isAlphabetic(ch)) {
                 counter++;
             }
         }

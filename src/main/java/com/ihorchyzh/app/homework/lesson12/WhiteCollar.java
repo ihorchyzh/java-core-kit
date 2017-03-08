@@ -12,14 +12,6 @@ public class WhiteCollar extends Human {
         this.company = company;
     }
 
-    public void setCompany(String company) {
-        if (checkCompanyName(company)) {
-            this.company = company;
-        } else {
-            System.out.println("Company name is invalid");
-        }
-    }
-
     private boolean checkCompanyName(String company) {
         boolean result = false;
         for (char ch : company.toCharArray()) {
@@ -30,6 +22,14 @@ public class WhiteCollar extends Human {
 
     public String getCompany() {
         return company;
+    }
+
+    public void setCompany(String company) {
+        if (checkCompanyName(company)) {
+            this.company = company;
+        } else {
+            System.out.println("Company name is invalid");
+        }
     }
 
 }

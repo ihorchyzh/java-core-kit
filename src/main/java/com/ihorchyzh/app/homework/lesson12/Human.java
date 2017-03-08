@@ -17,10 +17,6 @@ public class Human {
         return age;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public void setAge(int age) {
         if (age >= 1 && age <= 120) {
             this.age = age;
@@ -29,6 +25,10 @@ public class Human {
             System.out.println("Age invalid");
         }
 
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void setName(String name) {

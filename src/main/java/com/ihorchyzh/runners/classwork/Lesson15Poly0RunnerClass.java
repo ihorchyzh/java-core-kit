@@ -1,11 +1,11 @@
 package com.ihorchyzh.runners.classwork;
 
-import com.ihorchyzh.app.classwork.lesson15.*;
+import com.ihorchyzh.app.classwork.lesson15poly0.*;
 
 /**
  * Created by ihorchyzh on 3/2/17.
  */
-public class Lesson15RunnerClass {
+public class Lesson15Poly0RunnerClass {
 
     public static void main(String[] args) {
 
@@ -14,12 +14,14 @@ public class Lesson15RunnerClass {
         Car gmc = new GMC();
         Car lexus = new Lexus();
 
-
-        runAllCarsDrive(bmw);
+        runAnyCarDrive(audi);
+        runAnyCarDrive(bmw);
+        runAnyCarDrive(gmc);
+        runAnyCarDrive(lexus);
 
     }
 
-    public static void runAllCarsDrive(Car car) {
+    public static void runAnyCarDrive(Car car) {
         car.drive();
     }
 }
