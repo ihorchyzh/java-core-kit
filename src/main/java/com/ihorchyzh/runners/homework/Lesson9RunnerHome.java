@@ -1,5 +1,6 @@
 package com.ihorchyzh.runners.homework;
 
+import com.ihorchyzh.app.homework.lesson9.EnumMenu;
 import com.ihorchyzh.app.homework.lesson9.Palindrome;
 
 import java.util.InputMismatchException;
@@ -33,22 +34,23 @@ public class Lesson9RunnerHome {
         System.out.println("Now choose one of the 5 methods to verify.");
         try {
             String userInput = scanner.nextLine();
-            int userChoice = scanner.nextInt();
-            switch (userChoice) {
-                case 1:
+            String userChoice = scanner.nextLine();
+            EnumMenu enumMenu = EnumMenu.valueOf(userChoice.toUpperCase());
+            switch (enumMenu) {
+                case A:
                     System.out.println(palindrome.palindromeCharAtMethod(userInput));
                     break;
-                case 2:
+                case B:
                     char[] charArray = userInput.toCharArray();
                     System.out.println(palindrome.palindromeToLowerCaseMethod(charArray));
                     break;
-                case 3:
+                case C:
                     System.out.println(palindrome.palindromeReverseMethod(userInput));
                     break;
-                case 4:
+                case D:
                     System.out.println(palindrome.palindromeEqualsIgnoreMethod(userInput));
                     break;
-                case 5:
+                case E:
                     System.out.println(palindrome.palindromeReverseCharAtMethod(userInput));
                     break;
                 default:
@@ -56,7 +58,7 @@ public class Lesson9RunnerHome {
             }
             menu(scanner);
             choose(scanner);
-        } catch (InputMismatchException e) {
+        } catch (IllegalArgumentException e) {
             System.out.println("Only numbers required! Try again.");
             choose(scanner);
         }

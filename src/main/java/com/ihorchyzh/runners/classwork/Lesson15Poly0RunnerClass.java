@@ -21,7 +21,7 @@ public class Lesson15Poly0RunnerClass {
 
     }
 
-    public static void runAnyCarDrive(Car car) {
+    private static void runAnyCarDrive(Car car) {
         car.drive();
     }
 }

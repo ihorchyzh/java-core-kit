@@ -1,9 +1,9 @@
 package com.ihorchyzh.runners.homework;
 
 import com.ihorchyzh.app.homework.lesson6.ArrayFormat;
+import com.ihorchyzh.app.homework.lesson6.Menu;
 
 import java.util.Arrays;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -37,16 +37,17 @@ public class Lesson6RunnerHome {
                 Scanner scanner = new Scanner(System.in);
                 System.out.println("\nHi! Here is an app that can perform some actions with arrays. " +
                         "All you need it is type corresponding number and press Enter:\n\n" +
-                        "1. Out array in horizontal and vertical line;\n" +
-                        "2. Out normal and reversed array;\n" +
-                        "3. Generate random array and out quantity of even numbers in it;\n" +
-                        "4. Generate random array and out maximum number in it;\n" +
-                        "5. Generate array 8x5 and out the array;\n" +
-                        "6. Generate array 8x5 and out the formatted array;\n" +
-                        "8. Exit program.\n");
-                int userChoice = scanner.nextInt();
-                switch (userChoice) {
-                    case 1:
+                        "A. Out array in horizontal and vertical line;\n" +
+                        "B. Out normal and reversed array;\n" +
+                        "C. Generate random array and out quantity of even numbers in it;\n" +
+                        "D. Generate random array and out maximum number in it;\n" +
+                        "E. Generate array 8x5 and out the array;\n" +
+                        "F. Generate array 8x5 and out the formatted array;\n" +
+                        "G. Exit program.\n");
+                String userChoice = scanner.nextLine();
+                Menu menu = Menu.valueOf(userChoice.toUpperCase());
+                switch (menu) {
+                    case A:
                         int evenArrayLength = arrayFormat.evenArrayLengthCount(
                                 START_NUMBER_OF_EVEN_ARRAY, END_NUMBER_OF_EVEN_ARRAY
                         );
@@ -54,7 +55,7 @@ public class Lesson6RunnerHome {
                         System.out.println(arrayFormat.formattedHorizontalArray(evenArray) + "\n");
                         System.out.println(arrayFormat.formattedVerticalArray(evenArray));
                         break;
-                    case 2:
+                    case B:
                         int oddArrayLength = arrayFormat.oddArrayLengthCount(
                                 START_NUMBER_OF_ODD_ARRAY, END_NUMBER_OF_ODD_ARRAY
                         );
@@ -63,7 +64,7 @@ public class Lesson6RunnerHome {
                         int[] oddArrayReverse = arrayFormat.reverseArray(oddArray);
                         System.out.println(arrayFormat.formattedHorizontalArray(oddArrayReverse));
                         break;
-                    case 3:
+                    case C:
                         int[] randomGeneratedArray2C = arrayFormat.randomGeneratedArray2C(
                                 RANDOM_GENERATED_ARRAY_LENGTH, START_NUMBER_OF_SEGMENT_TASK_2C,
                                 END_NUMBER_OF_SEGMENT_TASK_2C
@@ -73,7 +74,7 @@ public class Lesson6RunnerHome {
                                 arrayFormat.countOfEvenNumbersInArray(randomGeneratedArray2C) +
                                 " even numbers in the array.");
                         break;
-                    case 4:
+                    case D:
                         int[] randomGeneratedArray2D = arrayFormat.randomGeneratedArray2D(
                                 RANDOM_GENERATED_ARRAY_LENGTH, START_NUMBER_OF_SEGMENT_TASK_2D,
                                 END_NUMBER_OF_SEGMENT_TASK_2D
@@ -84,7 +85,7 @@ public class Lesson6RunnerHome {
                         System.out.println("\nThe minimum number in array is " +
                                 arrayFormat.minNumberInArray(randomGeneratedArray2D));
                         break;
-                    case 5:
+                    case E:
                         int[][] multiDimensionalArray = arrayFormat.multiDimensionalArray(
                                 MULTI_DIMENSIONAL_ARRAY_COLUMNS, MULTI_DIMENSIONAL_ARRAY_ROWS,
                                 START_NUMBER_OF_SEGMENT_TASK_2E, END_NUMBER_OF_SEGMENT_TASK_2E
@@ -92,7 +93,7 @@ public class Lesson6RunnerHome {
                         String multiDimensionalArrayString = arrayFormat.formattedVerticalMultiDimensionalArray(multiDimensionalArray);
                         System.out.println(multiDimensionalArrayString);
                         break;
-                    case 6:
+                    case F:
                         int[][] multiDimensionalArrayFormatted = arrayFormat.multiDimensionalArray(
                                 MULTI_DIMENSIONAL_ARRAY_COLUMNS, MULTI_DIMENSIONAL_ARRAY_ROWS,
                                 START_NUMBER_OF_SEGMENT_TASK_2F, END_NUMBER_OF_SEGMENT_TASK_2F
@@ -100,13 +101,13 @@ public class Lesson6RunnerHome {
                         String multiDimensionalArrayFormattedString = arrayFormat.formattedVerticalMultiDimensionalArray(multiDimensionalArrayFormatted);
                         System.out.printf("%4s", multiDimensionalArrayFormattedString);
                         break;
-                    case 8:
+                    case G:
                         exit = true;
                         break;
                     default:
                         System.out.println("You entered wrong number. Required only number from the list! Try again!");
                 }
-            } catch (InputMismatchException e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println("You entered incorrect symbol! Try again!");
             }
         } while (exit != true);
