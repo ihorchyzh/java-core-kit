@@ -35,26 +35,4 @@ public class GameNames {
         }
     }
 
-//    public void isRightChoice(int age) {
-//        for (EnumPeople enumPeople : EnumPeople.values()) {
-//            if (enumPeople.getAge() == age) {
-//                System.out.println(enumPeople.getFullName());
-//                System.out.println(enumPeople.getAge());
-//            }
-//        }
-//    }
-
-//    for (Company cName : Company.values()) {
-//
-//        System.out.println("Company Value: " +
-//
-//                cName.getValue()+
-//
-//                " - Company Name: " +
-//
-//                cName);
-//
-//    }
-//
-
 }
